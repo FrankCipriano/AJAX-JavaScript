@@ -1,0 +1,21 @@
+{
+  "name": "ejercicios-ajax",
+  "version": "1.0.0",
+  "description": "serie de ejercicios con ajax",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "FrankDev",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs-extra": "^10.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.0"
+  }
+}

@@ -1,0 +1,202 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+main{
+    flex-grow: 1;
+}
+.contenedor{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
+}
+.cabecera{
+    padding: .5rem;
+    background-color: lemonchiffon;
+}
+.cabecera-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 3rem;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 115%;
+}
+.menu a{
+    color: sienna;
+    padding: 0 1vw;
+    transition: all .3s ease-in-out;
+}
+.menu a:hover{
+    opacity: .75;
+}
+/*-ESTILO PARA EL UPLOADER*/
+.uploadbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh;
+}
+progress{
+    margin-top: 1rem;
+}
+/*-ESTILOS PARA EL DRAG & DROP*/
+.zona-drop{
+    margin-left: auto;
+    margin-right: auto;
+    border: thin dotted black;
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.zona-drop.is-active{
+    border: thick dashed black;
+    background-color: rgba(255, 255, 0, 0.719);
+    animation: pulse 1.5s infinite;
+    animation-timing-function: linear;
+}
+@keyframes pulse {
+    0%,
+    100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+/*-ESTILOS PARA EL FORMULARIO B*/
+.formulario-contacto{
+    --form-ok-color:green;
+    --form-error-color:red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.formulario-contacto > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+.formulario-contacto textarea{
+    resize: none;
+}
+.formulario-contacto legend,
+.contacto-respuesta{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.formulario-contacto input,
+.formulario-contacto textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+.formulario-contacto input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.formulario-contacto *::placeholder{
+    color:black;
+}
+.formulario-contacto [required]:valid{
+    border:thin solid var(--form-ok-color);
+}
+.formulario-contacto [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+.formulario-contacto-error{
+    margin-top: 1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: blanchedalmond;
+    transition: all 800ms ease;
+}
+.formulario-contacto-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.contacto-loader{
+    text-align: center;
+}
+/*-ESTILO PARA LA TIENDA ONLINE O SERVICIOS*/
+.tecnologias{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tecnologias>*{
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+.tecnologia{
+    background-color: burlywood;
+    color: chocolate;
+    font-size: 125%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.tecnologia:hover{
+    opacity: .9;
+    transform: scale(.9);
+}
+.tecnologia img{
+    max-width: 100%;
+    height: auto;
+}
+.tecnologia figcaption{
+    padding: 1rem;
+}
+/*-ESTILOS PARA LA POKEAPI*/
+/* .poke-loader{
+    display: block;
+    margin: auto;
+} */
+.grid-fluid{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
