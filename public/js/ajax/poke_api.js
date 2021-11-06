@@ -14,9 +14,9 @@ async function cargarPokemons(url){
         $next_url
         console.log(json)
         
+        if(!respuesta.ok)   throw{status:respuesta.status,statusText:respuesta.statusText}
         const $div=d.querySelector(`.grid-fluid`)
         const $links=d.querySelector(`.links`)
-        if(!respuesta.ok)   throw{status:respuesta.status,statusText:respuesta.statusText}
 
         for(let i=0;i<json.results.length;i++){
             try {
